@@ -1,0 +1,67 @@
+@use "../../../helpers/_functions.scss" as *;
+
+.Login {
+    @include Breakpoints(small) {
+        min-height: 100vh;
+    }
+
+    @include Breakpoints(mobile) {
+        min-height: 100vh;
+    }
+
+    .FormContainer {
+        width: 50%;
+
+        @include Breakpoints(small) {
+            width: 100%;
+        }
+
+        @include Breakpoints(mobile) {
+            width: 100%;
+        }
+
+        form {
+            width: 500px;
+
+            img {
+                visibility: hidden;
+
+                @include Breakpoints(small) {
+                    visibility: visible;
+                }
+
+                @include Breakpoints(mobile) {
+                    visibility: visible;
+                }
+            }
+
+            .input_Icon {
+                top: 2.4px;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .Login_Logo {
+        .container-of-logo {
+            background-color: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+            width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        width: 50%;
+        background-color: $BaseColor;
+
+        @include Breakpoints(small) {
+            display: none;
+        }
+
+        @include Breakpoints(mobile) {
+            display: none;
+        }
+    }
+}
